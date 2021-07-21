@@ -56,10 +56,16 @@ const userSchema = new mongoose.Schema(
       type: Buffer
     }
   },
+  {
+    writeConcern: {
+      j: true,
+      wtimeout: 1000
+    }
+  },
 
   {
     timestamps: true,
-  }
+  },
 );
 
 
