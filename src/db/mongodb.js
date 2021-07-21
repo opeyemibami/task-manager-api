@@ -11,11 +11,6 @@ MongoClient.connect(connectionUrl,{useNewUrlParser:true,
     }
     const db = client.db(dbName)
 
-    // db.collection('users').insertOne({
-    //     name: 'Yhemmy',
-    //     age: 20
-    // })
-
     db.collection("tasks").insertMany([
       {
         description: "install mongodb",
