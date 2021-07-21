@@ -3,7 +3,7 @@ const dotenv = require('dotenv')
 dotenv.config()
 
 const dbName = 'taskManagerDB'
-const connectionUrl = process.env.MONGO_URI + dbName
+const connectionUrl = process.env.MONGO_URI 
 
 const connectDB = async () => {
   try {
