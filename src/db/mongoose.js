@@ -3,7 +3,7 @@ const dotenv = require('dotenv')
 dotenv.config()
 
 const dbName = 'taskManagerDB'
-const connectionUrl = process.env.MONGO_URI 
+const connectionUrl = process.env.MONGO_URI + dbName
 
 const connectDB = async () => {
   try {
@@ -14,7 +14,7 @@ const connectDB = async () => {
     })
     console.log(`MongoDB Connected ${conn.connection.host}`)
   } catch (error) {
-    // console.log(`Error Db: ${error.message}`)
+    console.log(`Error Db: ${error.message}`)
     process.exit(1)
   }
 }
